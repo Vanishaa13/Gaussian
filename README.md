@@ -17,26 +17,39 @@ To write a program to find the solution of a matrix using Gaussian Elimination.
 4. Read the elements of the augmented matrix A.
 
 5. For i = 0 to n-1:
+   
       a. Check whether A[i][i] is zero.
+   
       b. If A[i][i] = 0, display "Divide by zero detected!" and stop.
+   
       c. For j = i+1 to n-1:
+   
             i. Calculate ratio = A[j][i] / A[i][i].
+   
            ii. For k = i to n:
+   
                   A[j][k] = A[j][k] - ratio × A[i][k].
 
-6. Perform back substitution:
+7. Perform back substitution:
+   
       a. Calculate the last variable:
+   
             X[n-1] = A[n-1][n] / A[n-1][n-1].
       b. For i = n-2 down to 0:
+   
             i. Set X[i] = A[i][n].
+   
            ii. For j = i+1 to n-1:
+   
                   X[i] = X[i] - A[i][j] × X[j].
+   
           iii. Calculate:
+   
                   X[i] = X[i] / A[i][i].
 
-7. Display X0, X1, ..., Xn-1 up to two decimal places.
+9. Display X0, X1, ..., Xn-1 up to two decimal places.
 
-8. Stop.
+10. Stop.
 
 ## Program:
 ```
